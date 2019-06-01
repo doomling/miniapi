@@ -6,7 +6,6 @@ self.getUser = async (req, res, next) => {
 
   try {
     const user = await dbService.getUser(id)
-    console.log(user)
     return res.json(user)
   } 
   catch (e) {

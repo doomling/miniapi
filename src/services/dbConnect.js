@@ -40,12 +40,12 @@ self.getUsers = () => {
 }
 
 self.getUser = (id) => {
-    userModel.findById(id).then(data => {
-        // POR QUE ESTO NO SE DEVUELVEE AAAAA AAA AA AA A A A ..
+    const user = userModel.findById(id).then(data => {
         return data
     }).catch(err => {
         return err
     })
+    return user
 }
 
 self.saveUser = (data) => {
