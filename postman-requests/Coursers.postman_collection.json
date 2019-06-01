@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "f115eac1-164b-4879-8e33-c93a1b0596b3",
+		"name": "Coursers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bel\",\n    \"lastname\": \"Rey\",\n    \"age\": \"32\",\n    \"notes\": [\"Very\", \"cool\", \"person\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - http://localhost:3000/user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - http://localhost:3000/user/5cf208abad188f2ec88ab59c",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bel\",\n    \"lastname\": \"Rey\",\n    \"age\": \"1000001\",\n    \"notes\": [\n        \"Very\",\n        \"cool\",\n        \"person\",\n        \"blob\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/5cf208abad188f2ec88ab59c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"5cf208abad188f2ec88ab59c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/5cf208abad188f2ec88ab59c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/5cf208abad188f2ec88ab59c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"5cf208abad188f2ec88ab59c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
