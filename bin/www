@@ -22,8 +22,10 @@ app.set("port", port);
 
 var server = http.createServer(app);
 
+console.log(123);
 mongoose.Promise = global.Promise;
-const mongoUrl = "mongodb://localhost:27017/coursers";
+const mongoUrl = "mongodb://mongo-example-users:27017/users";
+console.log(mongoUrl);
 mongoose.connect(mongoUrl, { useNewUrlParser: true });
 
 /**

@@ -1,0 +1,28 @@
+version: "2.1"
+
+services:
+  miniapi:
+    container_name: example-users-api
+    image: example-users-api
+    restart: always
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3005:3005"
+    logging:
+      options:
+        max-size: 50m
+    links:
+      - mongo-example-users
+  mongo-example-users:
+    container_name: mongo-example-users
+    image: mongo
+    restart: always
+    ports:
+      - "27018:27017"
+networks:
+  default:
+    external:
+      name: example-users-network
