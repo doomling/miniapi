@@ -13,7 +13,7 @@ const mongoose = require("mongoose");
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || "3000");
+var port = normalizePort(process.env.PORT || "3005");
 app.set("port", port);
 
 /**
@@ -23,7 +23,7 @@ app.set("port", port);
 var server = http.createServer(app);
 
 mongoose.Promise = global.Promise;
-const mongoUrl = "mongodb://localhost:27017/coursers";
+const mongoUrl = "mongodb://mongo-example-users:27017/users";
 mongoose.connect(mongoUrl, { useNewUrlParser: true });
 
 /**
