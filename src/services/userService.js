@@ -1,7 +1,7 @@
 const User = require("../../models/User");
 
 class UserService {
-  getUsers() {
+   getUsers() {
     const data = User.find({})
       .then(data => {
         return data;
@@ -26,15 +26,7 @@ class UserService {
 
   saveUser(data) {
     const user = new User(data);
-    const result = user
-      .save()
-      .then(data => {
-        console.log("saved");
-        return result;
-      })
-      .catch(err => {
-        return err;
-      });
+    return user.save();
   }
 
   modifyUser(id, data) {
