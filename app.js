@@ -35,6 +35,14 @@ app.use(cors());
 //   next();
 // });
 
+let allowCrossDomain = function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  next();
+};
+
+app.use(allowCrossDomain);
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
