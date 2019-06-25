@@ -24,8 +24,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.use(cors());
-
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   res.header(
@@ -42,6 +40,15 @@ let allowCrossDomain = function(req, res, next) {
 };
 
 app.use(allowCrossDomain);
+
+app.use(
+  require("cors")({
+    origin: function(origin, callback) {
+      callback(null, origin);
+    },
+    credentials: true
+  })
+);
 
 // error handler
 app.use(function(err, req, res, next) {
